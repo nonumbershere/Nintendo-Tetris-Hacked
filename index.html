@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html id="main">
+
+<head>
+    <title id="titleTag">Tetris</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<!--launchIntoFullscreen(document.documentElement);-->
+
+<body>
+    <div id="leftBar">
+        <h2>Modes:</h2>
+        <h4>Normal:</h4>
+        Normal tetris. Mostly.
+        <h4>Fill:</h4>
+        Normal Tetris exept full lines won't get deleted. The goal is to fill the game-area.
+        <h2>Dpad:</h2>
+        <p id="debug">.</p>
+        <div id="smallUrlInfo">
+            <p id="smallURLHead">Found a bug? Go there: </p>
+            <p id="smallURLText">https://github.com/RealDekkia/switch-tetris</p>
+        </div>
+    </div>
+    <div id="box">
+        <canvas id="tetris" width="240" height="400"/>
+    </div>
+    <div id="rightBar">
+
+        <h2>Input:</h2>
+        <table>
+            <tr>
+                <td>Left:</td>
+                <td>
+                    <img src="img/aleft.png" height="32" width="32">
+                    <img src="img/dleft.png" height="32" width="32">
+                </td>
+            </tr>
+            <tr>
+                <td>Right:</td>
+                <td>
+                    <img src="img/alright.png" height="32" width="32">
+                    <img src="img/dright.png" height="32" width="32">
+                </td>
+            </tr>
+            <tr>
+                <td>Down:</td>
+                <td>
+                    <img src="img/adown.png" height="32" width="32">
+                    <img src="img/ddown.png" height="32" width="32">
+                </td>
+            </tr>
+            <tr>
+                <td>Rotate:</td>
+                <td>
+                    <img src="img/lshoulder.png" height="23" width="62">
+                    <img src="img/rshoulder.png" height="23" width="62">
+                </td>
+            </tr>
+            <tr>
+                <td>Pause/Start:</td>
+                <td>
+                    <img src="img/start.png" height="32" width="32">
+                    <img src="img/select.png" height="32" width="32">
+                </td>
+            </tr>
+            <tr>
+                <td>Toggle Mode:</td>
+                <td>
+                    <img src="img/y.png" height="32" width="32">
+                </td>
+            </tr>
+        </table>
+        <h2>Stats:</h2>
+        <table id="statTable">
+            <tr>
+                <td>Status:</td>
+                <td>
+                    <p id="gameState">Playing</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Mode:</td>
+                <td>
+                    <p id="gameMode">Normal</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Points:</td>
+                <td>
+                    <div id="score">0</div>
+                </td>
+            </tr>
+        </table>
+        <script src="js/utils.js"></script>
+        <div id="toggleFullscreen" onclick="toggleFullScreen(document.documentElement);">Toggle Fullscreen</div>
+    </div>
+    <script src="js/tetris.js"></script>
+    <script src="js/gamepad.js"></script>
+    <script src="js/inputman.js"></script>
+</body>
+
+</html>
